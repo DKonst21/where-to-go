@@ -9,7 +9,8 @@ def show_main(request):
     locations = Place.objects.all()
     features = []
     for location in locations:
-        features = {
+        features.append(
+            {
             'type': 'Feature',
             'geometry': {
                 'type': 'Point',
@@ -21,7 +22,7 @@ def show_main(request):
                 'detailsUrl': reverse('places', args=[location.id]),
             }
         }
-        features.append(features)
+        )
 
     context = {
         'geojson': {
