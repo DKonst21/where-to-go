@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django.utils.html import format_html, mark_safe
-from adminsortable2.admin import SortableInlineAdminMixin, SortableAdminMixin, SortableAdminBase, SortableInlineAdminMixin
+from django.utils.html import format_html
+from adminsortable2.admin import SortableAdminBase, SortableInlineAdminMixin
 
 from .models import Place, Image
 
@@ -48,5 +48,5 @@ class PlaceAdmin(SortableAdminBase, admin.ModelAdmin):
         'lng',
         'lat',
     )
-    inlines = [ImageInline,]
+    inlines = [ImageInline, ]
     search_fields = ['title']

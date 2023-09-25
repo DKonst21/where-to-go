@@ -11,17 +11,17 @@ def show_main(request):
     for location in locations:
         features.append(
             {
-            'type': 'Feature',
-            'geometry': {
-                'type': 'Point',
-                'coordinates': [float(location.lng), float(location.lat)]
-            },
-            'properties': {
-                'title': location.title,
-                'placeId': location.id,
-                'detailsUrl': reverse('places', args=[location.id]),
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [float(location.lng), float(location.lat)]
+                },
+                'properties': {
+                    'title': location.title,
+                    'placeId': location.id,
+                    'detailsUrl': reverse('places', args=[location.id]),
+                }
             }
-        }
         )
 
     context = {
