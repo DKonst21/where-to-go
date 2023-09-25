@@ -24,7 +24,7 @@ from . import views
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('', views.show_main),
-                  path('places/<int:place_id>/', views.place_view, name='places'),
+                  path('places/<int:place_id>/', views.view_place, name='places'),
                   path('tinymce/', include('tinymce.urls')),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL,
                                                                                            document_root=settings.MEDIA_ROOT)
