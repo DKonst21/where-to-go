@@ -20,6 +20,7 @@ class ImageAdmin(admin.ModelAdmin, PreviewMixin):
         'preview',
     )
 
+    autocomplete_fields = ['place']
     readonly_fields = ('preview',)
 
 

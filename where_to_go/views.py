@@ -33,13 +33,14 @@ def show_main(request):
     return render(request, 'index.html', context=context)
 
 
-def place_view(request, place_id):
+def view_place(request, place_id):
     place = get_object_or_404(Place, pk=place_id)
+    images = [image.image.url for image in place.images.all()]
     context = {
         'title': place.title,
-        'imgs': [image.image.url for image in place.images.all()],
-        'description_short': place.description_short,
-        'description_long': place.description_long,
+        'imgs': images,
+        'short_description': place.short_description,
+        'long_description': place.long_description,
         'coordinates': {
             'lat': place.lat,
             'lng': place.lng,
