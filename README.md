@@ -42,6 +42,8 @@ python3 manage.py runserver
 - `SECRET_KEY` — секретный ключ проекта
 - `ALLOWED_HOSTS` — см [документацию Django](https://docs.djangoproject.com/en/3.1/ref/settings/#allowed-hosts)
 
+Обязательным является только SECRET_KEY.
+
 Сайт, запущенный локально, будет доступен по адресу [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 Для входа в админку и добавления/изменения данных о локациях можно использовать адрес: [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
