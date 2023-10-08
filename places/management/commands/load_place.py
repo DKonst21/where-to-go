@@ -30,8 +30,8 @@ def add_place(serialized_place):
         title = serialized_place['title']
 
         place_descriptions = {
-            'description_short': serialized_place.get('description_short', ''),
-            'description_long': serialized_place.get('description_long', ''),
+            'short_description': serialized_place.get('description_short', ''),
+            'long_description': serialized_place.get('description_long', ''),
             'lng': serialized_place['coordinates']['lng'],
             'lat': serialized_place['coordinates']['lat'],
         }
