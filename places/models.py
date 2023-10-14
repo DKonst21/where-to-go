@@ -48,7 +48,7 @@ class Image(models.Model):
 
     image = models.ImageField('Изображение')
 
-    position = models.IntegerField('Позиция', db_index=True)
+    position = models.IntegerField('Позиция', default=1, db_index=True)
 
     class Meta:
         verbose_name = 'изображение'
